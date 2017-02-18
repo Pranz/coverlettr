@@ -1,0 +1,44 @@
+$sqrt_2: 1.41421356237;
+
+.paper {
+    padding: 100px 60px;
+    background: white;
+    $size: 700px;
+    width: $size;
+    height: $size * $sqrt_2;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3),
+    0 4px 10px rgba(0,0,0,0.15);
+    .content {
+        position: relative;
+        white-space: pre;
+    }
+    .cursor {
+        position: absolute;
+        display: inline-block;
+        height: 1.2em;
+        width: 2px;
+        background: #999;
+        &.visible {
+            opacity: 1;
+        }
+    }
+}
+
+.editable-element {
+    &:hover {
+        border: 1px dashed #66f;
+    }
+
+    &#contact-information {
+        width: 220px;
+        height: 140px;
+    }
+}
+
+.hidden-edit-box {
+    position: fixed;
+    opacity: 0;
+}
